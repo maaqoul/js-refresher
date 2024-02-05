@@ -331,31 +331,47 @@ A Promise in JavaScript is an object representing the eventual completion or fai
 - **Using Promises**: Handle the promise's resolution or rejection using `.then()`, `.catch()`, and `.finally()` methods.
 
 ## Example
-```
+```javascript
 // Creating a simple promise that resolves after a 2-second delay
 const helloPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("Hello, Promises!");
+    // Uncomment the line below to simulate an error
+    // reject("Promise error");
   }, 2000);
 });
 
-// Using the promise
-helloPromise.then(message => console.log(message));
+// Using the promise with .catch() and .finally()
+helloPromise
+  .then(message => console.log(message))
+  .catch(error => console.error(error)) // Error handling
+  .finally(() => console.log("Promise is settled")); // Finalization code
+
 ```
 
 ## Async/Await
 Async/Await simplifies working with promises, making asynchronous code easier to write and read.
 
 ## Example
-```
-// Async function that awaits the helloPromise
-async function displayMessage() {
-  const message = await helloPromise;
-  console.log(message);
-}
 
+```javascript
+// Async function that awaits the helloPromise with try...catch
+async function displayMessage() {
+  try {
+    const message = await helloPromise;
+    console.log(message);
+  } catch (error) {
+    console.error(error); // Error handling
+  } finally {
+    console.log("Async function completed"); // Finalization code
+  }
+}
 displayMessage();
+
 ```
+
+These additions demonstrate how to handle exceptions and perform cleanup tasks, ensuring your code is robust and handles all possible outcomes of asynchronous operations.
+
 
 ### Detailed Explanation
 - **Async Function**: An async function is a function declared with the `async` keyword. It always returns a promise.
@@ -368,6 +384,29 @@ displayMessage();
 ## Exercises
 1. Create a simple promise that resolves with a string "Hello, Promises!" after a 2-second delay and then log it to the console using `.then()`.
 2. Write an async function that awaits the resolution of a promise from Exercise 1 and logs the result to the console.
+
+# ES6 Tutorial - "New Built-in Methods"
+
+## Introduction
+ES6 introduces several new methods for existing built-in objects like Arrays, Strings, Objects, and Numbers, enhancing their functionality and making JavaScript more versatile.
+
+## Detailed Explanation
+- **Array Methods**: Find elements (`find`, `findIndex`), check conditions (`some`, `every`), and create new arrays (`from`, `of`).
+- **String Methods**: Includes methods for easier string handling (`startsWith`, `endsWith`, `includes`, `repeat`).
+- **Object Methods**: More utilities for object property manipulation (`Object.assign`, `Object.keys`, `Object.values`).
+- **Number Methods**: New methods and constants for better number handling (`Number.isNaN`, `Number.isFinite`).
+
+## Example
+
+
+## Best Practices
+- Use these new methods to write cleaner, more efficient code.
+- Prefer `Object.assign` for creating copies or merging objects.
+- Utilize new Array methods for more readable operations on collections.
+
+## Exercises
+1. Use `Array.find` to locate the first item in an array that meets a specified condition.
+2. Create a new string using the `String.includes` method to check if a word is present in a given sentence.
 
 
 
