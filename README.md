@@ -321,6 +321,56 @@ This example shows how to define a class, create an instance, use a method, and 
    - Add a static method `compareAge(person1, person2)` to the `Person` class that compares the age of two persons and returns the name of the older person.
    - Create two `Person` instances and use this static method to output who is older.
 
+# ES6 Tutorial - "Promises and Async/Await"
+
+## Introduction
+Promises and Async/Await offer elegant solutions for handling asynchronous operations in JavaScript, providing a way to operate on an eventual completion of a background task and its resulting value.
+
+## Promises
+A Promise in JavaScript is an object representing the eventual completion or failure of an asynchronous operation.
+
+### Detailed Explanation
+- **Creating Promises**: Use the `new Promise` constructor to create a promise. It takes an executor function that allows resolving or rejecting the promise.
+- **Using Promises**: Handle the promise's resolution or rejection using `.then()`, `.catch()`, and `.finally()` methods.
+
+## Example
+```
+// Creating a simple promise that resolves after a 2-second delay
+const helloPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Hello, Promises!");
+  }, 2000);
+});
+
+// Using the promise
+helloPromise.then(message => console.log(message));
+```
+
+## Async/Await
+Async/Await simplifies working with promises, making asynchronous code easier to write and read.
+
+## Example
+```
+// Async function that awaits the helloPromise
+async function displayMessage() {
+  const message = await helloPromise;
+  console.log(message);
+}
+
+displayMessage();
+```
+
+### Detailed Explanation
+- **Async Function**: An async function is a function declared with the `async` keyword. It always returns a promise.
+- **Await Operator**: The `await` keyword is used to wait for a promise to settle within an async function.
+
+## Best Practices
+- Use Promises for complex asynchronous operations like API calls.
+- Leverage Async/Await for a cleaner and more intuitive handling of asynchronous code.
+
+## Exercises
+1. Create a simple promise that resolves with a string "Hello, Promises!" after a 2-second delay and then log it to the console using `.then()`.
+2. Write an async function that awaits the resolution of a promise from Exercise 1 and logs the result to the console.
 
 
 
