@@ -14,14 +14,6 @@
 ### Template Literals
 - Using backticks for multi-line strings and embedding expressions.
 
-## Enhanced Object Properties
-### Property Shorthand
-- Simplifying object property definition when the property name matches the variable name.
-### Computed Property Names
-- Dynamically naming properties using square bracket notation.
-### Method Properties
-- Shorter syntax for defining methods on objects.
-
 ## Destructuring
 - Destructuring arrays and objects for easier data access.
 
