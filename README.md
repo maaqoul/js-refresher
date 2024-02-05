@@ -34,9 +34,6 @@
 ## Promises
 - Handling asynchronous operations with Promises.
 
-## Generators and Iterators
-- Functionality and use cases of generators and iterators.
-
 ## New Built-In Methods
 - Overview of new methods for arrays, objects, and other built-ins.
 
