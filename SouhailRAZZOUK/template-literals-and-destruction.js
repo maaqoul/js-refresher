@@ -6,7 +6,8 @@
 {
   const obj = { firstName: "John", lastName: "Doe" };
   const { firstName, lastName } = obj;
-  const greetings = `Hello Mr ${firstName} ${lastName} 😄👋`; // Hello Mr John Doe 😄👋
+  const greetings = `Hello Mr ${firstName} ${lastName} 😄👋
+  Today is: ${new Date()}`; // Hello Mr John Doe 😄👋
   console.log("🚀 ~ greetings:", greetings);
 }
 
