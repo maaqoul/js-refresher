@@ -312,7 +312,18 @@ This example shows how to define a class, create an instance, use a method, and 
 - Utilize `extends` for inheritance to promote code reuse.
 
 ## Exercises
-1. Define a class `Rectangle` with properties `width` and `height` and a method to calculate its area.
-2. Extend the `Rectangle` class to create a `Square` class, reusing the area calculation logic but ensuring the width and height are always equal.
-3. 
+
+1. **Extend the Person class**:
+   - Create a `Person` class with properties `name` and `age` and a method `describe()` that returns a string formatted as "Name: [name], Age: [age]".
+   - Extend this class to create an `Employee` class that adds a `salary` property and includes a method `showEmployeeDetails()` which returns all details, including salary.
+
+2. **Static Methods**:
+   - Add a static method `compareAge(person1, person2)` to the `Person` class that compares the age of two persons and returns the name of the older person.
+   - Create two `Person` instances and use this static method to output who is older.
+
+
+
+
+
+
 
